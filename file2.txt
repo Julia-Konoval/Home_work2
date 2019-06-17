@@ -1,0 +1,48 @@
+mkdir Cursor_time
+
+git init 
+//It is the git repository now//
+
+git checkout -b first_steps
+//The new branch first_steps was added//
+
+git remote add educational-repository https://github.com/Julia-Konoval/educational-repository.git
+//A remote repository is connected now//
+
+git checkout first_steps
+
+touch file1.txt
+//The new file was created in the brand-new directory//
+
+git add file1.txt
+
+git commit -m "The first file was added"
+//A new file was created and changes were commited in the local repository//
+
+git push https://github.com/Julia-Konoval/educational-repository.git first_steps
+//The changes were submitted to the remote repository//
+//Than the sentence "These are the changes which should be commited to the local repository." was put down in the remote repository.//
+
+git pull https://github.com/Julia-Konoval/educational-repository.git first_steps
+
+git commit -m "Changes were tranferred from the remote repository to the local one"
+//Changes were tranferred from the remote repository to the local one. Now there is a string "These are the changes which should be commited to the local repository." in the local repository. Changes were commited//
+
+git checkout master
+git merge first_steps
+//two branches are merged now//
+
+git checkout first_steps
+touch theCourseOfActions.txt
+//The text file describing the course of actions was created, commited and
+ pushed to the remote repository//
+
+
+nano theCourseOfActions.txt
+//The text file describing the course of actions was created, commited and
+ pushed//
+
+git add theCourseOfActions.txt
+git commit -m "The description added"
+
+git push https://github.com/Julia-Konoval/Cursor_time.git first_steps
