@@ -33,16 +33,22 @@ git merge first_steps
 //two branches are merged now//
 
 git checkout first_steps
-touch theCourseOfActions.txt
+touch file2.txt
 //The text file describing the course of actions was created, commited and
  pushed to the remote repository//
 
 
-nano theCourseOfActions.txt
+nano file2.txt
 //The text file describing the course of actions was created, commited and
  pushed//
 
-git add theCourseOfActions.txt
+git add file2.txt
 git commit -m "The description added"
 
 git push https://github.com/Julia-Konoval/Cursor_time.git first_steps
+
+git checkout master
+git pull https://github.com/Julia-Konoval/Cursor_time.git first_steps
+git merge master
+git push https://github.com/Julia-Konoval/Cursor_time.git master
+//branch first_steps was merged to master, changes were marked//
